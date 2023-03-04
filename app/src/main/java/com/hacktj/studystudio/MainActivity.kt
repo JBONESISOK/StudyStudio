@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             randomText = "Study smarter, not harder!"
         }
         else if(randomNum == 7){
-            randomText = "Study ahead, don't want until the deadline."
+            randomText = "Set study goals, they can "
         }
         else if(randomNum == 8){
             randomText = "Using colors are a great way to organize!"
