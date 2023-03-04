@@ -2,4 +2,8 @@
     <string name="app_name">StudyStudio</string>
     <string name="studystudio">StudyStudio</string>
     <string name="streak">Streak: %1$d</string>
+    <string name="home_menu">Home</string>
+    <string name="calendar_menu">Calendar</string>
+    <string name="settings_menu">Settings</string>
+    <string name="timer_menu">Timer</string>
 </resources>
