@@ -24,4 +24,7 @@
     <string name="date_format_d_m_y">Date format d/m/y</string>
     <string name="setting">Settings</string>
     <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="unlockDesc">Enjoy your free time after a productive time</string>
+    <string name="lockDesc">Block yourself from distractions</string>
 </resources>

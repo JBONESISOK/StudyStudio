@@ -1,16 +1,20 @@
 package com.hacktj.studystudio
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Intent
+import android.media.Ringtone
+import android.media.RingtoneManager
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.w3c.dom.Text
 
 
 class Timer : Fragment() {
@@ -23,6 +27,8 @@ class Timer : Fragment() {
     private lateinit var startButton: Button
     private lateinit var minutesText: TextView
     private lateinit var secondsText: TextView
+    private lateinit var stopButton: Button
+    private var timerOn: Boolean = false
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -52,23 +58,48 @@ class Timer : Fragment() {
         startButton.setOnClickListener {
             startTimer()
         }
+        stopButton = view.findViewById(R.id.stopButton)
+        stopButton.setOnClickListener {
+            timerOn = false
+            minutes = 0
+            seconds = 0
+            setTimerText()
+        }
         return view
     }
 
     private fun startTimer() {
+        timerOn = true
         scope.launch {
-            while (minutes != 0 || seconds != 0) {
+            while (timerOn && (minutes != 0)) {
                 delay(1000)
-                if (seconds == 0) {
-                    seconds = 60
+                if (seconds <= 0) {
+                    seconds = 59
                     minutes--
+                } else {
+                    seconds--
                 }
-                println(seconds)
-                seconds--
-                secondsText.text = seconds.toString()
-                minutesText.text = minutes.toString()
+                setTimerText()
             }
         }
+        val alarmManager = requireActivity().getSystemService(AlarmManager::class.java)
+        val alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
+            PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+        }
+        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, 0, alarmIntent)
+
     }
 
+    private fun setTimerText() {
+        if (seconds < 10) {
+            secondsText.text = "0" + seconds
+        } else {
+            secondsText.text = seconds.toString()
+        }
+        if (minutes < 10) {
+            minutesText.text = "0" + minutes
+        } else {
+            minutesText.text = minutes.toString()
+        }
+    }
 }
