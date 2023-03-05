@@ -64,13 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-    <Button
-        android:id="@+id/buttonIncrement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        tools:layout_editor_absoluteX="293dp"
-        tools:layout_editor_absoluteY="401dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
