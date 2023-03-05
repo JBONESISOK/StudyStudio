@@ -6,4 +6,8 @@
     <string name="calendar_menu">Calendar</string>
     <string name="settings_menu">Settings</string>
     <string name="timer_menu">Timer</string>
+    <string name="date_format">Date format d/m/y</string>
+    <string name="alarm_type">Alarm type V</string>
+    <string name="alarm_sound">Alarm sound</string>
+    <string name="settings">Settings</string>
 </resources>
