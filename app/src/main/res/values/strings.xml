@@ -6,4 +6,9 @@
     <string name="calendar_menu">Calendar</string>
     <string name="settings_menu">Settings</string>
     <string name="timer_menu">Timer</string>
+    <string name="lock_menu">Screen Lock</string>
+    <string name="date">Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="study_studio">Study Studio</string>
 </resources>
