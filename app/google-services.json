@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "26251116404",
+    "project_id": "fir-calendar-14b4d",
+    "storage_bucket": "fir-calendar-14b4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26251116404:android:ad2a56ddf5a691ceceb621",
+        "android_client_info": {
+          "package_name": "com.hacktj.studystudio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26251116404-sfbhmtpq938gu4ubfj1mmd468ohlq0ik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hacktj.studystudio",
+            "certificate_hash": "afd58af2ec57d86f0f31950e5dea7cc9bd8601e7"
+          }
+        },
+        {
+          "client_id": "26251116404-ubhtl10gdis85sb5ri9drlaudg3p53a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM8_1W3UEUvRz7EX_1KAKnU1kXxNZvLO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26251116404-ubhtl10gdis85sb5ri9drlaudg3p53a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

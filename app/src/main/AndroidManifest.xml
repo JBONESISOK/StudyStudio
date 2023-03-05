@@ -12,12 +12,15 @@
         android:theme="@style/Theme.StudyStudio"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".SurveyActivity2"
             android:exported="false"
             android:label="@string/title_activity_survey2"
             android:theme="@style/Theme.StudyStudio.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CalendarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
