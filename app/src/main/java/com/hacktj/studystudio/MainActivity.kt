@@ -6,7 +6,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         var randomNum = (1 until 11).random()
         randomNum = randomNum.toInt()
-        var randomText = ""
+        var randomText : String = ""
         if(randomNum == 1){
             randomText = "Good sleep is essential for learning."
         }
@@ -26,16 +26,16 @@ class MainActivity : AppCompatActivity() {
             randomText = "Study smarter, not harder!"
         }
         else if(randomNum == 7){
-            randomText = "Set study goals, they can "
+            randomText = "Study ahead, don't want until the deadline."
         }
         else if(randomNum == 8){
-            randomText = "Using colors are a great way to organize!"
+            randomText = "Study groups can help avoid procrastination!"
         }
         else if(randomNum == 9){
-            randomText = "Using colors are a great way to organize!"
+            randomText = "Reward yourself, it makes studying much more motivating!"
         }
         else if(randomNum == 10){
-            randomText = "Using colors are a great way to organize!"
+            randomText = "Setting small goals for yourself is a great way to progress!"
         }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
