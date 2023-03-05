@@ -13,6 +13,11 @@
         android:icon="@drawable/timer_icon"
         android:title="@string/timer_menu" />
     <item
+        android:id="@+id/lock"
+        android:icon="@drawable/screenlock_icon"
+        android:title="@string/lock_menu"
+        />
+    <item
         android:id="@+id/setting"
         android:icon="@drawable/settings_icon"
         android:title="@string/settings_menu" />

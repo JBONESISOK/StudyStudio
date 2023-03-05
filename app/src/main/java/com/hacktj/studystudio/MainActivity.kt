@@ -1,28 +1,38 @@
 package com.hacktj.studystudio
 
-import android.icu.util.Calendar
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.hacktj.studystudio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var calendar: Calendar
-    private lateinit var streakText: TextView
-    private lateinit var dateText: TextView
+
+    private lateinit var binding: ActivityMainBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        calendar = Calendar.getInstance()
-        dateText = findViewById(R.id.dateView)
-        streakText = findViewById(R.id.streakText)
-        dateText.text = getDate()
-        streakText.text = getString(R.string.streak, 0)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        changeFragment(Home())
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> changeFragment(Home())
+                R.id.setting -> changeFragment(Settings())
+                R.id.calendar -> changeFragment(Calendar())
+                R.id.timer -> changeFragment(Timer())
+                else -> changeFragment(ScreenLock())
+            }
+            true
+        }
+
     }
-    private fun getDate(): String {
-        val month = calendar.get(Calendar.MONTH) + 1
-        val day = calendar.get(Calendar.DAY_OF_MONTH)
-        val year = calendar.get(Calendar.YEAR)
-        return "$month/$day/$year"
-    }
+
+
+    private fun changeFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frameLayout, fragment)
+            commit()
+        }
 
 }

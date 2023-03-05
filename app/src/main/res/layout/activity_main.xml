@@ -7,53 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titleView"
-        android:layout_width="352dp"
-        android:layout_height="101dp"
-        android:background="#00FFF1F1"
-        android:fontFamily="casual"
-        android:text="@string/studystudio"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#FFFFFF"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/dateView"
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/dateView"
-        android:layout_width="158dp"
-        android:layout_height="51dp"
-        android:background="#00FFF1F1"
-        android:fontFamily="casual"
-        android:text=""
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#FFFFFF"
-        android:textSize="33sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/streakText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="@string/streak"
-        android:textColor="#FFFFFF"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateView" />
-
+        android:layout_weight="1"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#41B241"
@@ -61,6 +25,7 @@
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
