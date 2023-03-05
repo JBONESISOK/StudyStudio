@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">StudyStudio</string>
-    <string name="studystudio">StudyStudio</string>
+    <string name="study_studio">StudyStudio</string>
+    <string name="date">Date</string>
     <string name="streak">Streak: %1$d</string>
     <string name="home_menu">Home</string>
     <string name="calendar_menu">Calendar</string>
@@ -10,4 +11,7 @@
     <string name="alarm_type">Alarm type V</string>
     <string name="alarm_sound">Alarm sound</string>
     <string name="settings">Settings</string>
+    <string name="hello_blank_fragment">hello calendar</string>
+    <string name="lock_menu">Screen Lock</string>
+    <string name="quote">Quote</string>
 </resources>
