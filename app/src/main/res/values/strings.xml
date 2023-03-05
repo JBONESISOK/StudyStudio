@@ -14,4 +14,14 @@
     <string name="hello_blank_fragment">hello calendar</string>
     <string name="lock_menu">Screen Lock</string>
     <string name="quote">Quote</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="count_0">Count: 0</string>
+    <string name="quoteText">(Insert quote here)</string>
+    <string name="add10">+10 minutes</string>
+    <string name="minus10">-10 Minutes</string>
+    <string name="turn_alarm_sound_off">Turn alarm sound off</string>
+    <string name="date_format_d_m_y">Date format d/m/y</string>
+    <string name="setting">Settings</string>
+    <string name="start">Start</string>
 </resources>
