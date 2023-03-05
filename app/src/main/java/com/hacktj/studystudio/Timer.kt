@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
@@ -28,6 +29,7 @@ class Timer : Fragment() {
     private lateinit var minutesText: TextView
     private lateinit var secondsText: TextView
     private lateinit var stopButton: Button
+    private var debounce: Boolean = false
     private var timerOn: Boolean = false
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,7 +58,9 @@ class Timer : Fragment() {
         }
         startButton = view.findViewById(R.id.startButton)
         startButton.setOnClickListener {
-            startTimer()
+            if(!debounce) {
+                startTimer()
+            }
         }
         stopButton = view.findViewById(R.id.stopButton)
         stopButton.setOnClickListener {
@@ -70,6 +74,8 @@ class Timer : Fragment() {
 
     private fun startTimer() {
         timerOn = true
+        debounce = true
+        val previousTime = minutes
         scope.launch {
             while (timerOn && (minutes != 0)) {
                 delay(1000)
@@ -80,13 +86,20 @@ class Timer : Fragment() {
                     seconds--
                 }
                 setTimerText()
+                if(minutes <= previousTime - 30) {
+                    println(minutes)
+                    timerOn = false
+                    Toast.makeText(context, "You may take a break now!", Toast.LENGTH_LONG).show()
+                }
             }
+            val alarmManager = requireActivity().getSystemService(AlarmManager::class.java)
+            val alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
+                PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+            }
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, 0, alarmIntent)
+            debounce = false
         }
-        val alarmManager = requireActivity().getSystemService(AlarmManager::class.java)
-        val alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
-            PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
-        }
-        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, 0, alarmIntent)
+
 
     }
 

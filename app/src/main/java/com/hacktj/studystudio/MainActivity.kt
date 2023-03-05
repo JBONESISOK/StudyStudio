@@ -3,6 +3,7 @@ package com.hacktj.studystudio
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.google.firebase.FirebaseApp
 import com.hacktj.studystudio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -27,4 +27,9 @@
     <string name="stop">Stop</string>
     <string name="unlockDesc">Enjoy your free time after a productive time</string>
     <string name="lockDesc">Block yourself from distractions</string>
+    <string name="settingtitle">Settings</string>
+    <string name="calendar">Calendar</string>
+    <string name="add_event">ADD EVENT</string>
+    <string name="name">Name</string>
+    <string name="event">Event</string>
 </resources>
