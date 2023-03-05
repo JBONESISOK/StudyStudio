@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var calendar: Calendar
     private lateinit var streakText: TextView
     private lateinit var dateText: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         streakText = findViewById(R.id.streakText)
         dateText.text = getDate()
         streakText.text = getString(R.string.streak, 0)
+
     }
     private fun getDate(): String {
         val month = calendar.get(Calendar.MONTH) + 1
@@ -24,5 +26,8 @@ class MainActivity : AppCompatActivity() {
         val year = calendar.get(Calendar.YEAR)
         return "$month/$day/$year"
     }
+
+
+
 
 }

@@ -12,7 +12,7 @@
         android:layout_width="352dp"
         android:layout_height="101dp"
         android:background="#00FFF1F1"
-        android:fontFamily="casual"
+        android:fontFamily="@font/be_vietnam_semibold"
         android:text="@string/studystudio"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -44,7 +44,7 @@
         android:id="@+id/streakText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:fontFamily="@font/be_vietnam"
         android:text="@string/streak"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
@@ -54,6 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dateView" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#41B241"
@@ -63,5 +64,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+    <Button
+        android:id="@+id/buttonIncrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="401dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
