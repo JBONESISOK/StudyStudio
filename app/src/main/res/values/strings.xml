@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">StudyStudio</string>
+    <string name="study_studio">StudyStudio</string>
+    <string name="date">Date</string>
+    <string name="streak">Streak: %1$d</string>
+    <string name="home_menu">Home</string>
+    <string name="calendar_menu">Calendar</string>
+    <string name="settings_menu">Settings</string>
+    <string name="timer_menu">Timer</string>
+    <string name="date_format">Date format d/m/y</string>
+    <string name="alarm_type">Alarm type V</string>
+    <string name="alarm_sound">Alarm sound</string>
+    <string name="settings">Settings</string>
+    <string name="hello_blank_fragment">hello calendar</string>
+    <string name="lock_menu">Screen Lock</string>
+    <string name="quote">Quote</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="count_0">Count: 0</string>
+    <string name="quoteText">(Insert quote here)</string>
+    <string name="add10">+10 minutes</string>
+    <string name="minus10">-10 Minutes</string>
+    <string name="turn_alarm_sound_off">Turn alarm sound off</string>
+    <string name="date_format_d_m_y">Date format d/m/y</string>
+    <string name="setting">Settings</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="unlockDesc">Enjoy your free time after a productive time</string>
+    <string name="lockDesc">Block yourself from distractions</string>
+    <string name="settingtitle">Settings</string>
+    <string name="calendar">Calendar</string>
+    <string name="add_event">ADD EVENT</string>
+    <string name="name">Name</string>
+    <string name="event">Event</string>
 </resources>
